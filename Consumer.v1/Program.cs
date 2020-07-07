@@ -1,5 +1,7 @@
 ﻿using Confluent.Kafka;
 using Confluent.Kafka.Admin;
+using Confluent.Kafka.SyncOverAsync;
+using Confluent.SchemaRegistry.Serdes;
 using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;
@@ -95,7 +97,7 @@ namespace Consumer.v1
             // will be used automatically (where available). The default deserializer for string
             // is UTF8. The default deserializer for Ignore returns null for all input data
             // (including non-null data).
-            using (var consumer = new ConsumerBuilder<int, string>(config)
+            using (var consumer = new ConsumerBuilder<int, HelloReply>(config)
                 // Note: All handlers are called on the main .Consume thread.
                 .SetErrorHandler((_, e) => Console.WriteLine($"Error: {e.Reason}"))
                 // .SetStatisticsHandler((_, json) => Console.WriteLine($"Statistics: {json}"))
@@ -111,6 +113,8 @@ namespace Consumer.v1
                 {
                     Console.WriteLine($"Revoking assignment: [{string.Join(", ", partitions)}]");
                 })
+                // Set value Protobuf deserializer
+                .SetValueDeserializer(new ProtobufDeserializer<HelloReply>().AsSyncOverAsync())
                 .Build())
             {
                 consumer.Subscribe(topics);

@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+option csharp_namespace = "Producer.v1";
+
+package greet;
+
+// The response message containing the greetings.
+message HelloReply {
+  string message = 1;
+}

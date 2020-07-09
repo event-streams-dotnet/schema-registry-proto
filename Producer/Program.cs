@@ -2,12 +2,13 @@
 using Confluent.SchemaRegistry;
 using Confluent.SchemaRegistry.Serdes;
 using Microsoft.Extensions.Configuration;
+using Protos.v1;
 using System;
 using System.IO;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Producer.v1
+namespace Producer
 {
     class Program
     {

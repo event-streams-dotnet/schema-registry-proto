@@ -1,4 +1,4 @@
-﻿namespace Producer.v1
+﻿namespace Producer
 {
     public class ProducerOptions
     {

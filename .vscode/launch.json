@@ -23,9 +23,9 @@
             "request": "launch",
             "preLaunchTask": "build",
             // If you have changed target frameworks, make sure to update the program path.
-            "program": "${workspaceFolder}/Producer.v1/bin/Debug/netcoreapp3.1/Producer.v1.dll",
+            "program": "${workspaceFolder}/Producer/bin/Debug/netcoreapp3.1/Producer.dll",
             "args": [],
-            "cwd": "${workspaceFolder}/Producer.v1",
+            "cwd": "${workspaceFolder}/Producer",
             // For more information about the 'console' field, see https://aka.ms/VSCode-CS-LaunchJson-Console
             "console": "internalConsole",
             "stopAtEntry": false

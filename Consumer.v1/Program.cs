@@ -3,6 +3,7 @@ using Confluent.Kafka.Admin;
 using Confluent.Kafka.SyncOverAsync;
 using Confluent.SchemaRegistry.Serdes;
 using Microsoft.Extensions.Configuration;
+using Protos.v1;
 using System;
 using System.Collections.Generic;
 using System.IO;

@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "Protos.v4";
+
+import "google/protobuf/timestamp.proto";
+
+// The response message containing the greetings.
+message HelloReply {
+  string message = 1;
+  google.protobuf.Timestamp dateTimeStamp = 3; // Keep same field number as v3
+}

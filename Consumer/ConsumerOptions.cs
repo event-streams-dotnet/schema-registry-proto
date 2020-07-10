@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace Consumer.v1
+namespace Consumer
 {
     public class ConsumerOptions
     {

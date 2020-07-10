@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+option csharp_namespace = "Protos.v3";
+
+import "google/protobuf/wrappers.proto";
+import "google/protobuf/timestamp.proto";
+
+// The response message containing the greetings.
+message HelloReply {
+  string message = 1;
+  google.protobuf.Int32Value temperatureF = 2;
+  google.protobuf.Timestamp dateTimeStamp = 3;
+}

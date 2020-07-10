@@ -1,10 +1,9 @@
 syntax = "proto3";
 
-option csharp_namespace = "Protos.v1";
-
-package greet;
+option csharp_namespace = "Protos.v5";
 
 // The response message containing the greetings.
 message HelloReply {
   string message = 1;
+  string dateTimeStamp = 3; // Change from Timestamp to string
 }

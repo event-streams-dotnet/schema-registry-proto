@@ -12,14 +12,15 @@
   </PropertyGroup>
 
   <ItemGroup>
-      <Content Include="Protos\**\*.proto">
+      <Content Include="Protos/**/*.proto">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </Content>
   </ItemGroup>
 
   <ItemGroup>
     <!-- pack  proto files -->
-    <Content Include="Protos\Greet.v1\greet.proto" PackagePath="lib\netstandard2.0\Protos\Greet.v1\" />
+    <Content Include="Protos/greet.v1.proto" PackagePath="lib/netstandard2.0/Protos/" />
+    <Content Include="Protos/greet.v2.proto" PackagePath="lib/netstandard2.0/Protos/" />
   </ItemGroup>
 
 </Project>

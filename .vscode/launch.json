@@ -10,11 +10,11 @@
             "request": "launch",
             "preLaunchTask": "build",
             // If you have changed target frameworks, make sure to update the program path.
-            "program": "${workspaceFolder}/Consumer.v1/bin/Debug/netcoreapp3.1/Consumer.v1.dll",
+            "program": "${workspaceFolder}/Consumer/bin/Debug/netcoreapp3.1/Consumer.dll",
             "args": [],
-            "cwd": "${workspaceFolder}/Consumer.v1",
+            "cwd": "${workspaceFolder}/Consumer",
             // For more information about the 'console' field, see https://aka.ms/VSCode-CS-LaunchJson-Console
-            "console": "internalConsole",
+            "console": "integratedTerminal",
             "stopAtEntry": false
         },
         {
@@ -27,7 +27,7 @@
             "args": [],
             "cwd": "${workspaceFolder}/Producer",
             // For more information about the 'console' field, see https://aka.ms/VSCode-CS-LaunchJson-Console
-            "console": "internalConsole",
+            "console": "integratedTerminal",
             "stopAtEntry": false
         }
     ]
